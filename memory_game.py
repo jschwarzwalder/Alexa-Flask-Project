@@ -41,7 +41,7 @@ def next_round():
 
 @ask.intent("AnswerIntent", convert={'first': str, 'second': str, 'third': str, 'fourth': str, 'fifth': str})
 
-def answer(first, second, third):
+def answer(first, second, third, fourth, fifth):
 
     current_colors = session.attributes['colors']
 
