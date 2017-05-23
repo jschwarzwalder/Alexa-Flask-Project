@@ -13,6 +13,8 @@ ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
+color_choice = [ "red", "blue", "green", "yellow", "orange", "purple", "white", "black", "brown", "silver", "gold"]
+
 
 @ask.launch
 
@@ -27,24 +29,28 @@ def new_game():
 
 def next_round():
 
-    numbers = [randint(0, 9) for _ in range(3)]
+   
+    new_color = [color_choice[randint(0, color_choice.len)]]
 
-    round_msg = render_template('round', numbers=numbers)
+    round_msg = render_template('round', new_color)
 
-    session.attributes['numbers'] = numbers[::-1]  # reverse
+    session.attributes['colors'] = [new_color]  
 
     return question(round_msg)
 
 
-@ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
+@ask.intent("AnswerIntent", convert={'first': str, 'second': str, 'third': str, 'fourth': str, 'fifth': str})
 
 def answer(first, second, third):
 
-    winning_numbers = session.attributes['numbers']
+    current_colors = session.attributes['colors']
 
     if [first, second, third] == winning_numbers:
 
-        msg = render_template('win')
+        new_color = color_choice[randint(0, color_choice.len)]
+        msg = render_template('round', new_color)
+        current_colors.append(new_color)
+        session.attributes['colors'] = colors[::] 
 
     else:
 
