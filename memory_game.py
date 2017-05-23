@@ -30,11 +30,11 @@ def new_game():
 def next_round():
 
    
-    new_color = [color_choice[randint(0, color_choice.len)]]
+    new_color = color_choice[randint(0, color_choice.len - 1)]
 
-    round_msg = render_template('round', new_color)
+    round_msg = render_template('round', color = new_color)
 
-    session.attributes['colors'] = [new_color]  
+    session.attributes['list_of_colors'] = [new_color]  
 
     return question(round_msg)
 
@@ -43,18 +43,26 @@ def next_round():
 
 def answer(first, second, third, fourth, fifth):
 
-    current_colors = session.attributes['colors']
+    current_colors = session.attributes['list_of_colors']
+    match = false
+    user_answers = [first, second, third, fourth, fifth]
+    index = 0
+    for color in current_colors:
+        if color != user_answers[index]:
+            break
+        else
+            index ++
 
-    if [first, second, third] == winning_numbers:
+    if match:
 
-        new_color = color_choice[randint(0, color_choice.len)]
-        msg = render_template('round', new_color)
+        new_color = color_choice[randint(0, color_choice.len - 1)]
+        msg = render_template('round', color = new_color)
         current_colors.append(new_color)
-        session.attributes['colors'] = colors[::] 
+        session.attributes['list_of_colors'] = current_colors
 
     else:
 
-        msg = render_template('lose')
+        msg = render_template('lose', current_colors )
 
     return statement(msg)
 
