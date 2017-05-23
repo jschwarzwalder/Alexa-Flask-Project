@@ -49,9 +49,11 @@ def answer(first, second, third, fourth, fifth):
     index = 0
     for color in current_colors:
         if color != user_answers[index]:
+            match = false
             break
-        else
-            index ++
+        else:
+            index += 1
+            match = true
 
     if match:
 
