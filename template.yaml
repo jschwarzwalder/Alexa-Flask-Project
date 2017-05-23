@@ -1,7 +1,7 @@
-welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
+welcome: Welcome to memory game. I'm going to say a list of colors for you to repeat back. Each time you get it right I'll add one color. Ready?
 
-round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
+round: New color: {{color[-1]}}. Can you repeat all the colors?
 
-win: Good job!
+win: Good job! You could remember up to 20 colors!
 
-lose: Sorry, that's the wrong answer.
+lose: Sorry, the correct answer was {{ colors|join(", ") }}.
