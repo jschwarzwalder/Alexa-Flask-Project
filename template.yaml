@@ -1,7 +1,7 @@
 welcome: Welcome to memory game. I'm going to say a list of colors for you to repeat back. Each time you get it right I'll add one color. Ready?
 
-round: New color: {{color[-1]}}. Can you repeat all the colors?
+round: New color: {{color}}. Say all the colors so far?
 
-win: Good job! You could remember up to 20 colors!
+win: Good job! You could remember up to 5 colors!
 
 lose: Sorry, the correct answer was {{ colors|join(", ") }}.
