@@ -4,9 +4,7 @@
         "aws_region": "us-east-1",
         "profile_name": "default",
         "s3_bucket": "zappa-thfkf56eb",
-        "manage_roles": false, // Disable Zappa client managing roles.
-        "role_name": "MyLambdaRole", // Name of your Zappa execution role. Default <project_name>-<env>-ZappaExecutionRole.
-       
+        
         "extra_permissions": [{ // Attach any extra permissions to this policy.
             "Effect": "Allow",
             "Action": ["rekognition:*"], // AWS Service ARN
@@ -14,3 +12,4 @@
             }]
     }
 }
+
