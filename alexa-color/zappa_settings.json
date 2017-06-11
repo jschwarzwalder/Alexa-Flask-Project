@@ -1,0 +1,22 @@
+{
+    "staging": {
+        "app_function": "memory_game.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "s3_bucket": "zappa-alexaColor"
+    },
+    
+    // The name of your stage
+    "dev": {
+        // The name of your S3 bucket
+        "s3_bucket": "lmbda",
+
+        // The modular python path to your WSGI application function.
+        // In Flask and Bottle, this is your 'app' object.
+        // Flask (your_module.py):
+        // app = Flask()
+        // Bottle (your_module.py):
+        // app = bottle.default_app()
+        "app_function": "your_module.app"
+    }
+}
