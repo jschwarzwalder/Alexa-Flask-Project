@@ -1,0 +1,31 @@
+
+==============
+
+Traceback (most recent call last):
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\zappa\cli.py", line 2353, in handle
+    sys.exit(cli.handle())
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\zappa\cli.py", line 427, in handle
+    self.init()
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\zappa\cli.py", line 1284, in init
+    \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u255d\u255a\u2550\u255d  \u255a\u2550\u255d\u255a\u2550\u255d     \u255a\u2550\u255d     \u255a\u2550\u255d  \u255a\u2550\u255d\n""", fg='green', bold=True))
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\click\utils.py", line 259, in echo
+    file.write(message)
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\colorama\ansitowin32.py", line 40, in write
+    self.__convertor.write(text)
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\colorama\ansitowin32.py", line 141, in write
+    self.write_and_convert(text)
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\colorama\ansitowin32.py", line 169, in write_and_convert
+    self.write_plain_text(text, cursor, len(text))
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\site-packages\colorama\ansitowin32.py", line 174, in write_plain_text
+    self.wrapped.write(text[start:end])
+  File "c:\users\{username}\.virtualenvs\zappa-test\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-9: character maps to <undefined>
+
+==============
+
+Need help? Found a bug? Let us know! :D
+File bug reports on GitHub here: https://github.com/Miserlou/Zappa
+And join our Slack channel here: https://slack.zappa.io
+Love!,
+ ~ Team Zappa!
